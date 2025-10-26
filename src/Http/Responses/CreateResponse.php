@@ -1,0 +1,18 @@
+<?php
+
+declare(strict_types=1);
+
+namespace BabaissaNdiaye\LaravelResponseHandler\Http\Responses;
+
+class CreateResponse extends BaseResponse
+{
+    public function __construct(string $message = '', mixed $data = null)
+    {
+        parent::__construct($message, $data, 201);
+    }
+
+    protected function getDefaultMessage(): string
+    {
+        return 'Création réussie';
+    }
+}
